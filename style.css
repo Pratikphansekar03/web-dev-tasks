@@ -1,0 +1,249 @@
+*, body{ 
+    padding: 0; 
+    margin: 0; 
+    font-size: 14px; 
+    font-weight: 400; 
+    line-height: normal; 
+    font-family: "Montserrat", sans-serif; 
+    text-decoration: none; 
+    list-style-type: none; 
+    color: black;
+}
+
+.ribbon{ 
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    background-color: magenta; 
+    width: 100px; 
+    height: 70px; 
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 40% 50%);
+}
+
+.wrap
+{ 
+    width: min(1100px, 100%);
+     margin: 0 auto;
+}
+.wrap .companysec{ 
+    padding: 50px 0 26px; 
+    position: relative;
+}
+h2, h4{ 
+    font-size: 24px; 
+    font-weight: 600; 
+    line-height: normal; 
+    padding: 10px 50px; 
+    border-radius: 10px; 
+    background-color: magenta; 
+    color: white; 
+    width: fit-content; 
+    margin: 0 auto;
+}
+.wrap .companysec p{ 
+    font-size: 16px; 
+    font-weight: 400; 
+    line-height: 26px; 
+    width: min(700px, 94%); 
+    text-align: center; 
+    margin: 20px auto 0;
+}
+.wrap .companysec .hr{ 
+    width: min(500px, 94%); 
+    display: block; 
+    margin: 20px auto 0; 
+    border-bottom: 2px dashed magenta;
+}
+
+.teamsec h3{ 
+    font-size: 22px; 
+    font-weight: 600; 
+    line-height: normal; 
+    width: fit-content; 
+    margin: 0 auto;
+}
+.teamsec h4{ 
+    font-size: 20px; 
+    font-weight: 500; 
+    padding: 8px 10px; 
+    border-radius: 8px; 
+    margin: 20px auto 0;
+}
+.teamsec ul{
+     display: flex; 
+     flex-wrap: wrap; 
+     flex-direction: row; 
+     justify-content: center; 
+     align-items: center; 
+     gap: 30px 3%; 
+     margin: 30px 0;
+    }
+.teamsec ul li{ 
+    width: 22.5%;
+}
+.teamsec 
+.dev_team, 
+.teamsec 
+.sales_team{ 
+    position: relative;
+}
+.teamsec 
+.sales_team{ 
+    padding-bottom: 70px;
+}
+.teamsec 
+.dev_team 
+.ribbon{ 
+    transform: rotate(180deg); 
+    right: unset; 
+    left: 0; 
+    top: -20px;
+}
+.teamsec 
+.sales_team 
+.ribbon1{ 
+    top: -20px;
+}
+.teamsec 
+.sales_team 
+.ribbon2{  
+    transform: rotate(180deg); 
+    right: unset; 
+    left: 0; 
+    top: unset; 
+    bottom: 0;
+}
+.teamsec 
+.management_team ul li:first-child{ 
+    margin-left: 14%;
+}
+.teamsec 
+.management_team ul li:nth-of-type(2){  
+    margin-right: 14%;
+}
+.teamsec 
+.other_teams ul li:last-child{ 
+    margin-right: 10%;
+}
+.teamsec 
+.other_teams ul li:nth-of-type(5){ 
+    margin-left: 10%;
+}
+.teamsec ul li 
+.imgbox{
+     width: 150px; 
+     height: 150px; 
+     border-radius: 50%; 
+     position: relative; 
+     margin: 0 auto -90px; 
+     overflow: hidden; 
+     border: 1px solid magenta;}
+.teamsec ul li 
+.imgbox img{ width: 150px; 
+    height: 150px; 
+    transition: all .5s ease-in-out;
+}
+.teamsec ul li:hover 
+.imgbox img{ 
+    transform: scale(1.2);
+}
+.teamsec ul li 
+.contentbox{ 
+    padding: 105px 35px 20px; 
+    border-radius: 10px; 
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+} 
+.teamsec ul li 
+.contentbox h6{ 
+    font-size: 16px; 
+    font-weight: 700; 
+    text-align: center;
+}
+.teamsec ul li 
+.contentbox p{ 
+    font-size: 16px; 
+    font-weight: 400; 
+    text-align: center; 
+    color: magenta; 
+    margin-top: 10px; 
+    min-height: 36px;
+}
+.teamsec ul li 
+.contentbox p em{ 
+    color: magenta;
+}
+
+
+@media all and (max-width: 1024px) {
+    .teamsec ul{ 
+        padding: 0 10px; 
+        box-sizing: border-box;
+    }
+}
+@media all and (max-width: 800px) {
+    .teamsec ul li{ 
+        width: 31.3%;
+    }
+    .teamsec 
+    .management_team ul li:first-child, 
+    .teamsec 
+    .management_team ul li:nth-of-type(2), 
+    .teamsec 
+    .other_teams ul li:last-child, 
+    .teamsec 
+    .other_teams ul li:nth-of-type(5){
+         margin: 0%;
+        }
+}
+@media all and (max-width: 640px) {
+    .teamsec ul li 
+    .contentbox{ 
+        padding: 105px 10px 15px;
+    }
+    .teamsec ul li 
+    .contentbox p, 
+    .teamsec ul li 
+    .contentbox h6{ 
+        font-size: 14px;
+    }
+    .ribbon{ 
+        width: 70px; 
+        height: 50px;
+    }
+    .teamsec 
+    .dev_team 
+    .ribbon, 
+    .teamsec 
+    .sales_team 
+    .ribbon1{
+         top: -5px;
+        }
+    .teamsec 
+    .sales_team {
+        padding-bottom: 50px;
+    }
+    .teamsec ul li{ width: 48.5%;}
+}
+@media all and (max-width: 480px) {
+    h2{ font-size: 20px; 
+        margin-top: 5px;}
+    .teamsec h4{ font-size: 17px;}
+    .wrap 
+    .companysec p{ 
+        font-size: 15px; 
+        line-height: 24px;
+    }
+}
+@media all and (max-width: 320px) {
+    .teamsec ul li{ 
+        width: 100%;
+    }
+    .teamsec 
+    .dev_team 
+    .ribbon, 
+    .teamsec 
+    .sales_team 
+    .ribbon1{ 
+        display: none;
+    }
+}
